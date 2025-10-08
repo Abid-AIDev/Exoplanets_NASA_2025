@@ -1,6 +1,7 @@
 # Exoplanets_NASA_2025 — README
 
-![Uploading Screenshot 2025-10-08 at 2.35.15 PM.png…]()
+<img width="1230" height="291" alt="Screenshot 2025-10-08 at 2 35 57 PM" src="https://github.com/user-attachments/assets/2edfac13-89a0-4b87-b4c6-4328a622472f" />
+
 
 This repository contains a trimmed and portable copy of the NASA Space Apps Exoplanet project. It is split into two main deliverables:
 
