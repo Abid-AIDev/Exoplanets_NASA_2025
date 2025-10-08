@@ -21,6 +21,11 @@ This README explains the purpose of each folder, how to run the Streamlit demo, 
 
 ## Model Web (Streamlit demo)
 
+<img width="1512" height="854" alt="Screenshot 2025-10-08 at 2 40 03 PM" src="https://github.com/user-attachments/assets/5057c422-e316-40b9-a25d-4c5517de699f" />
+<img width="1512" height="863" alt="Screenshot 2025-10-08 at 2 40 45 PM" src="https://github.com/user-attachments/assets/d636c301-4dea-4b34-b45b-8468ae939c51" />
+<img width="1512" height="867" alt="Screenshot 2025-10-08 at 2 41 14 PM" src="https://github.com/user-attachments/assets/b3e09231-8a32-4c0b-8b00-1dd0f1c22fcf" />
+
+
 Overview
 - A trimmed Streamlit demo that recreates the core UI from the NASA Space Apps project. It accepts transit and stellar features, runs a classification model, and shows probabilities, metrics, and sample dataset rows.
 - The demo is intentionally lightweight and includes a fallback mechanism: when the expected large model is absent, the app constructs a tiny logistic-regression fallback so the UI remains interactive.
@@ -85,6 +90,9 @@ Troubleshooting
 ---
 
 ## Web app (React + Vite frontend + Flask backend)
+<img width="1512" height="857" alt="Screenshot 2025-10-08 at 2 44 01 PM" src="https://github.com/user-attachments/assets/14a3ac03-b7c8-4b2d-b702-1dbc3afcb41c" />
+<img width="1512" height="863" alt="Screenshot 2025-10-08 at 2 44 21 PM" src="https://github.com/user-attachments/assets/9760fc8c-681c-408a-b6bd-445bb736fe76" />
+<img width="1512" height="860" alt="Screenshot 2025-10-08 at 2 44 31 PM" src="https://github.com/user-attachments/assets/019b69d8-33f1-4b03-ade4-4a91bf0f182d" />
 
 Overview
 - `Web app/` is a separate interactive frontend that presents the exoplanet catalog, per-planet detail pages, and static analysis images (PNG figures) produced by analysis scripts.
