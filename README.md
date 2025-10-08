@@ -1,5 +1,7 @@
 # Exoplanets_NASA_2025 — README
 
+![Uploading Screenshot 2025-10-08 at 2.35.15 PM.png…]()
+
 This repository contains a trimmed and portable copy of the NASA Space Apps Exoplanet project. It is split into two main deliverables:
 
 - `Model Web/` — a compact Streamlit-based demo (Comprehensive Exoplanet Hunter AI). This is the primary demo you can run locally. It includes a small fallback path so the UI runs even without the original large trained models.
