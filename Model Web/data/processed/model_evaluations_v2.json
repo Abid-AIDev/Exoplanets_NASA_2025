@@ -1,0 +1,34 @@
+{
+  "comprehensive_best_model": {
+    "error": "predict_failed",
+    "message": "X has 13 features, but GradientBoostingClassifier is expecting 44 features as input."
+  },
+  "enhanced_best_model": {
+    "error": "predict_failed",
+    "message": "X has 13 features, but GradientBoostingClassifier is expecting 112 features as input."
+  },
+  "best_model": {
+    "error": "predict_failed",
+    "message": "feature_names mismatch: ['period_days', 'duration_hours', 'depth_ppm', 'planet_radius_rearth', 'duty_cycle', 'transit_frequency', 'planet_radius_from_depth', 'mission_encoded', 'score'] ['period_days', 'duration_hours', 'depth_ppm', 'planet_radius_rearth', 'equilibrium_temp_k', 'stellar_logg', 'stellar_radius_rsun', 'stellar_teff_k', 'duty_cycle', 'transit_frequency', 'planet_radius_from_depth', 'stellar_luminosity', 'mission_encoded']\nexpected score in input data\ntraining data did not have the following fields: stellar_logg, stellar_luminosity, equilibrium_temp_k, stellar_teff_k, stellar_radius_rsun"
+  },
+  "nasa_space_apps_model": {
+    "error": "predict_failed",
+    "message": "Feature shape mismatch, expected: 55, got 13"
+  },
+  "final_binary_model": {
+    "error": "predict_failed",
+    "message": "X has 13 features, but ExtraTreesClassifier is expecting 54 features as input."
+  },
+  "improved_best_model": {
+    "error": "predict_failed",
+    "message": "X has 13 features, but RandomForestClassifier is expecting 50 features as input."
+  },
+  "tabular_xgb": {
+    "error": "predict_failed",
+    "message": "X has 13 features, but StandardScaler is expecting 3 features as input."
+  },
+  "binary_best_model": {
+    "error": "predict_failed",
+    "message": "X has 13 features, but GradientBoostingClassifier is expecting 50 features as input."
+  }
+}

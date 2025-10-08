@@ -1,0 +1,24 @@
+{
+  "feature_columns": [
+    "period_days",
+    "duration_hours",
+    "depth_ppm",
+    "planet_radius_rearth",
+    "equilibrium_temp_k",
+    "stellar_logg",
+    "stellar_radius_rsun",
+    "stellar_teff_k",
+    "duty_cycle",
+    "transit_frequency",
+    "planet_radius_from_depth",
+    "stellar_luminosity",
+    "mission_encoded"
+  ],
+  "label_classes": [
+    "candidate",
+    "fp",
+    "planet"
+  ],
+  "n_features": 13,
+  "n_classes": 3
+}

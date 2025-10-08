@@ -1,0 +1,64 @@
+{
+  "model_results": {
+    "RandomForest": {
+      "accuracy": 0.749645390070922,
+      "precision": 0.7636743019847786,
+      "recall": 0.7492071951001319,
+      "f1": 0.7550857773547429,
+      "roc_auc": 0.8989588854916674
+    },
+    "GradientBoosting": {
+      "accuracy": 0.7522458628841607,
+      "precision": 0.7688844411215975,
+      "recall": 0.7505575980729727,
+      "f1": 0.757598742152607,
+      "roc_auc": 0.8977954114485703
+    },
+    "LogisticRegression": {
+      "accuracy": 0.6664302600472813,
+      "precision": 0.7065292623594667,
+      "recall": 0.6518893440773647,
+      "f1": 0.6606043512309842,
+      "roc_auc": 0.827778208835868
+    },
+    "SVM": {
+      "accuracy": 0.7073286052009456,
+      "precision": 0.7185553017197898,
+      "recall": 0.7144344179639667,
+      "f1": 0.7147108688552417,
+      "roc_auc": 0.8578886603288943
+    },
+    "XGBoost": {
+      "accuracy": 0.7543735224586289,
+      "precision": 0.7703237446990178,
+      "recall": 0.7526582313716527,
+      "f1": 0.7594445417199545,
+      "roc_auc": 0.8986681065811751
+    },
+    "LightGBM": {
+      "accuracy": 0.7539007092198582,
+      "precision": 0.768797639719739,
+      "recall": 0.752670124602536,
+      "f1": 0.7589934662373555,
+      "roc_auc": 0.9013568015871481
+    }
+  },
+  "best_model": "XGBoost",
+  "best_score": 0.7594445417199545,
+  "feature_columns": [
+    "period_days",
+    "duration_hours",
+    "depth_ppm",
+    "planet_radius_rearth",
+    "duty_cycle",
+    "transit_frequency",
+    "planet_radius_from_depth",
+    "mission_encoded",
+    "score"
+  ],
+  "label_classes": [
+    "candidate",
+    "fp",
+    "planet"
+  ]
+}

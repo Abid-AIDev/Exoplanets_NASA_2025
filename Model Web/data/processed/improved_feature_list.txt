@@ -1,0 +1,51 @@
+Improved Exoplanet Dataset Features
+========================================
+
+ 1. depth_ppm
+ 2. discovery_method
+ 3. discovery_year
+ 4. distance_ratio
+ 5. duration_hours
+ 6. eccentricity
+ 7. equilibrium_temp_k
+ 8. fp_flag_co
+ 9. fp_flag_ec
+10. fp_flag_nt
+11. fp_flag_ss
+12. impact_parameter
+13. inclination_deg
+14. insolation_flux
+15. longitude_periastron
+16. period_days
+17. planet_mass_earth
+18. planet_mass_jupiter
+19. planet_radius_jupiter
+20. planet_radius_rearth
+21. radius_ratio
+22. score
+23. semi_major_axis_au
+24. stellar_age_gyr
+25. stellar_density
+26. stellar_distance_pc
+27. stellar_logg
+28. stellar_luminosity
+29. stellar_mass_msun
+30. stellar_metallicity
+31. stellar_radius_rsun
+32. stellar_teff_k
+33. transit_epoch
+34. transit_ingress_hours
+35. duty_cycle
+36. transit_frequency
+37. planet_radius_from_depth
+38. mission_encoded
+39. stellar_radius_solar
+40. stellar_mass_solar
+41. transit_depth_mag
+42. habitable_zone_inner
+43. habitable_zone_outer
+44. in_habitable_zone
+45. transit_snr
+46. has_radius_measurement
+47. has_mass_measurement
+48. has_stellar_parameters

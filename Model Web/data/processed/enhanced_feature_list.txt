@@ -1,0 +1,108 @@
+Enhanced Exoplanet Dataset Features
+========================================
+
+ 1. depth_err
+ 2. depth_ppm
+ 3. discovery_method
+ 4. discovery_year
+ 5. distance_ratio
+ 6. duration_err
+ 7. duration_hours
+ 8. eccentricity
+ 9. equilibrium_temp_err
+10. equilibrium_temp_k
+11. fp_flag_co
+12. fp_flag_ec
+13. fp_flag_nt
+14. fp_flag_ss
+15. impact_parameter
+16. inclination_deg
+17. insolation_flux
+18. insolation_flux_err
+19. longitude_periastron
+20. max_multiple_event
+21. max_single_event
+22. period_days
+23. period_err
+24. planet_mass_earth
+25. planet_mass_jupiter
+26. planet_radius_err
+27. planet_radius_jupiter
+28. planet_radius_rearth
+29. radius_ratio
+30. score
+31. semi_major_axis_au
+32. stellar_age_gyr
+33. stellar_bcmag
+34. stellar_bmag
+35. stellar_dec
+36. stellar_density
+37. stellar_distance_err
+38. stellar_distance_pc
+39. stellar_gaia_bp_mag
+40. stellar_gaia_mag
+41. stellar_gaia_rp_mag
+42. stellar_gmag
+43. stellar_hmag
+44. stellar_icmag
+45. stellar_imag
+46. stellar_jmag
+47. stellar_kmag
+48. stellar_logg
+49. stellar_logg_err
+50. stellar_luminosity
+51. stellar_mass_msun
+52. stellar_metallicity
+53. stellar_pmdec
+54. stellar_pmdec_err
+55. stellar_pmra
+56. stellar_pmra_err
+57. stellar_ra
+58. stellar_radius_err
+59. stellar_radius_rsun
+60. stellar_radvel
+61. stellar_radvelerr1
+62. stellar_radvelerr2
+63. stellar_radvellim
+64. stellar_radvelsyncerr
+65. stellar_rcmag
+66. stellar_rmag
+67. stellar_rotp
+68. stellar_rotperr1
+69. stellar_rotperr2
+70. stellar_rotplim
+71. stellar_rotpsyncerr
+72. stellar_teff_err
+73. stellar_teff_k
+74. stellar_tmag
+75. stellar_umag
+76. stellar_vmag
+77. stellar_vsini
+78. stellar_vsinierr1
+79. stellar_vsinierr2
+80. stellar_vsinilim
+81. stellar_vsinilowerlimit
+82. stellar_vsinisyncerr
+83. stellar_vsiniupperlimit
+84. stellar_zmag
+85. transit_epoch
+86. transit_epoch_err
+87. transit_ingress_hours
+88. duty_cycle
+89. transit_frequency
+90. planet_radius_from_depth
+91. mission_encoded
+92. stellar_radius_solar
+93. stellar_mass_solar
+94. transit_depth_mag
+95. orbital_velocity_kms
+96. habitable_zone_inner
+97. habitable_zone_outer
+98. in_habitable_zone
+99. transit_snr
+100. stellar_rotation_period_days
+101. rotation_vs_orbital_ratio
+102. multi_planet_system
+103. has_radius_measurement
+104. has_mass_measurement
+105. has_stellar_parameters

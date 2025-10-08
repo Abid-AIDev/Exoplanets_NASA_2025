@@ -1,0 +1,37 @@
+Comprehensive Exoplanet Dataset Features
+==================================================
+
+ 1. period_days
+ 2. duration_hours
+ 3. depth_ppm
+ 4. planet_radius_rearth
+ 5. planet_mass_earth
+ 6. score
+ 7. stellar_teff_k
+ 8. stellar_radius_rsun
+ 9. stellar_logg
+10. stellar_mass_msun
+11. stellar_metallicity
+12. impact_parameter
+13. semi_major_axis_au
+14. inclination_deg
+15. equilibrium_temp_k
+16. insolation_flux
+17. distance_ratio
+18. stellar_density
+19. transit_epoch
+20. eccentricity
+21. longitude_periastron
+22. transit_ingress_hours
+23. radius_ratio
+24. stellar_luminosity
+25. stellar_age_gyr
+26. fp_flag_nt
+27. fp_flag_ss
+28. fp_flag_co
+29. fp_flag_ec
+30. planet_radius_jupiter
+31. planet_mass_jupiter
+32. stellar_distance_pc
+33. discovery_year
+34. discovery_method

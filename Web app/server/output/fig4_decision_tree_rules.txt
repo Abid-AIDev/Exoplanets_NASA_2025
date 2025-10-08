@@ -1,0 +1,10 @@
+|--- score <= 25.88
+|   |--- score <= 9.92
+|   |   |--- class: 2
+|   |--- score >  9.92
+|   |   |--- class: 0
+|--- score >  25.88
+|   |--- period_days <= 55.35
+|   |   |--- class: 1
+|   |--- period_days >  55.35
+|   |   |--- class: 0

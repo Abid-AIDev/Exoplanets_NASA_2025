@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache/
+
+# Virtual environments
+.venv/
+.venv312/
+.env
+venv/
+ENV/
+
+.# Project specific
+# Ignore large binary model artifacts but allow JSON summaries and small metadata files
+models/*.joblib
+models/*_best_model.joblib
+models/final_binary_model.joblib
+# keep model json summaries
+!models/*.json
+!models/README_MODEL.md
+
+# Ignore large dataset files but allow processed small parquet/csv used by app
+dataset/*.csv
+data/raw/
+data/*_raw.csv
+# allow processed small files
+!data/processed/*.parquet
+!data/processed/*.csv
+!data/processed/*.json
+.DS_Store
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db

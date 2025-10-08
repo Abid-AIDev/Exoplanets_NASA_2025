@@ -1,0 +1,296 @@
+{
+  "best_model": {
+    "confusion_matrix": [
+      [
+        90,
+        1477,
+        132
+      ],
+      [
+        16,
+        1249,
+        1
+      ],
+      [
+        19,
+        1021,
+        225
+      ]
+    ],
+    "accuracy": 0.3697399527186761,
+    "precision": 0.5606083178150217,
+    "recall": 0.40580327641788627,
+    "f1": 0.2914176481291975,
+    "roc_auc": 0.765422277085667,
+    "classification_report": {
+      "0": {
+        "precision": 0.72,
+        "recall": 0.052972336668628606,
+        "f1-score": 0.09868421052631579,
+        "support": 1699.0
+      },
+      "1": {
+        "precision": 0.3333333333333333,
+        "recall": 0.9865718799368088,
+        "f1-score": 0.4983044085378017,
+        "support": 1266.0
+      },
+      "2": {
+        "precision": 0.6284916201117319,
+        "recall": 0.17786561264822134,
+        "f1-score": 0.27726432532347506,
+        "support": 1265.0
+      },
+      "accuracy": 0.3697399527186761,
+      "macro avg": {
+        "precision": 0.5606083178150217,
+        "recall": 0.40580327641788627,
+        "f1-score": 0.2914176481291975,
+        "support": 4230.0
+      },
+      "weighted avg": {
+        "precision": 0.5769082504589459,
+        "recall": 0.3697399527186761,
+        "f1-score": 0.2716920157038448,
+        "support": 4230.0
+      }
+    }
+  },
+  "binary_best_model": {
+    "error": "The feature names should match those that were passed during fit.\nFeature names seen at fit time, yet now missing:\n- discovery_method\n- discovery_year\n- eccentricity\n- longitude_periastron\n"
+  },
+  "comprehensive_best_model": {
+    "confusion_matrix": [
+      [
+        1635,
+        64,
+        0
+      ],
+      [
+        714,
+        552,
+        0
+      ],
+      [
+        1259,
+        6,
+        0
+      ]
+    ],
+    "accuracy": 0.5170212765957447,
+    "precision": 0.44687315076892364,
+    "recall": 0.4661165800531304,
+    "f1": 0.4003043629616145,
+    "roc_auc": null,
+    "classification_report": {
+      "0": {
+        "precision": 0.453159645232816,
+        "recall": 0.9623307828134197,
+        "f1-score": 0.6161673261729791,
+        "support": 1699.0
+      },
+      "1": {
+        "precision": 0.887459807073955,
+        "recall": 0.43601895734597157,
+        "f1-score": 0.5847457627118644,
+        "support": 1266.0
+      },
+      "2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1265.0
+      },
+      "accuracy": 0.5170212765957447,
+      "macro avg": {
+        "precision": 0.44687315076892364,
+        "recall": 0.4661165800531304,
+        "f1-score": 0.4003043629616145,
+        "support": 4230.0
+      },
+      "weighted avg": {
+        "precision": 0.44762230567522016,
+        "recall": 0.5170212765957447,
+        "f1-score": 0.4224956082177569,
+        "support": 4230.0
+      }
+    }
+  },
+  "enhanced_best_model": {
+    "confusion_matrix": [
+      [
+        1699,
+        0,
+        0
+      ],
+      [
+        1266,
+        0,
+        0
+      ],
+      [
+        1265,
+        0,
+        0
+      ]
+    ],
+    "accuracy": 0.4016548463356974,
+    "precision": 0.1338849487785658,
+    "recall": 0.3333333333333333,
+    "f1": 0.1910383988306066,
+    "roc_auc": 0.5961747278879663,
+    "classification_report": {
+      "0": {
+        "precision": 0.4016548463356974,
+        "recall": 1.0,
+        "f1-score": 0.5731151964918199,
+        "support": 1699.0
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1266.0
+      },
+      "2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1265.0
+      },
+      "accuracy": 0.4016548463356974,
+      "macro avg": {
+        "precision": 0.1338849487785658,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.1910383988306066,
+        "support": 4230.0
+      },
+      "weighted avg": {
+        "precision": 0.1613266155849527,
+        "recall": 0.4016548463356974,
+        "f1-score": 0.23019449617957494,
+        "support": 4230.0
+      }
+    }
+  },
+  "final_binary_model": {
+    "confusion_matrix": [
+      [
+        1699,
+        0,
+        0
+      ],
+      [
+        1149,
+        117,
+        0
+      ],
+      [
+        1265,
+        0,
+        0
+      ]
+    ],
+    "accuracy": 0.4293144208037825,
+    "precision": 0.4710268255126023,
+    "recall": 0.3641390205371248,
+    "f1": 0.25128328006134865,
+    "roc_auc": null,
+    "classification_report": {
+      "0": {
+        "precision": 0.41308047653780694,
+        "recall": 1.0,
+        "f1-score": 0.5846524432209222,
+        "support": 1699.0
+      },
+      "1": {
+        "precision": 1.0,
+        "recall": 0.0924170616113744,
+        "f1-score": 0.16919739696312364,
+        "support": 1266.0
+      },
+      "2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1265.0
+      },
+      "accuracy": 0.4293144208037825,
+      "macro avg": {
+        "precision": 0.4710268255126023,
+        "recall": 0.3641390205371248,
+        "f1-score": 0.25128328006134865,
+        "support": 4230.0
+      },
+      "weighted avg": {
+        "precision": 0.46520655546991346,
+        "recall": 0.4293144208037825,
+        "f1-score": 0.2854677081767521,
+        "support": 4230.0
+      }
+    }
+  },
+  "improved_best_model": {
+    "error": "The feature names should match those that were passed during fit.\nFeature names seen at fit time, yet now missing:\n- discovery_method\n- discovery_year\n- eccentricity\n- longitude_periastron\n"
+  },
+  "nasa_space_apps_model": {
+    "confusion_matrix": [
+      [
+        1699,
+        0,
+        0
+      ],
+      [
+        1266,
+        0,
+        0
+      ],
+      [
+        1265,
+        0,
+        0
+      ]
+    ],
+    "accuracy": 0.4016548463356974,
+    "precision": 0.1338849487785658,
+    "recall": 0.3333333333333333,
+    "f1": 0.1910383988306066,
+    "roc_auc": null,
+    "classification_report": {
+      "0": {
+        "precision": 0.4016548463356974,
+        "recall": 1.0,
+        "f1-score": 0.5731151964918199,
+        "support": 1699.0
+      },
+      "1": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1266.0
+      },
+      "2": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 1265.0
+      },
+      "accuracy": 0.4016548463356974,
+      "macro avg": {
+        "precision": 0.1338849487785658,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.1910383988306066,
+        "support": 4230.0
+      },
+      "weighted avg": {
+        "precision": 0.1613266155849527,
+        "recall": 0.4016548463356974,
+        "f1-score": 0.23019449617957494,
+        "support": 4230.0
+      }
+    }
+  },
+  "tabular_xgb": {
+    "error": "'NoneType' object has no attribute 'predict'"
+  }
+}

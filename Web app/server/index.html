@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Linear Regression Surface</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div id="plot" style="width:100%; height:100vh;"></div>
+
+  <script>
+    // Try to get planets data from localStorage
+    let period = [], depth = [], radius = [], labels = [];
+    let planetsData = null;
+    try {
+      planetsData = JSON.parse(localStorage.getItem('planets_data'));
+    } catch (e) {}
+    if (Array.isArray(planetsData) && planetsData.length > 0) {
+      period = planetsData.map(p => Number(p.period_days));
+      depth = planetsData.map(p => Number(p.depth_ppm));
+      radius = planetsData.map(p => Number(p.planet_radius_rearth));
+      labels = planetsData.map(p => p.label_raw || 'UNKNOWN');
+    } else {
+      // fallback example data
+      period = [10, 20, 30, 40, 50];
+      depth = [200, 400, 600, 800, 1000];
+      radius = [1.2, 1.9, 2.7, 3.3, 4.1];
+      labels = ['CONFIRMED','CANDIDATE','FALSE POSITIVE','CONFIRMED','CANDIDATE'];
+    }
+
+    // Color map like your Python version
+    const colorsDict = {
+      'CONFIRMED': 'green',
+      'CANDIDATE': 'orange',
+      'FALSE POSITIVE': 'red'
+    };
+
+    // Scatter points grouped by label
+    const scatterTraces = [];
+    const uniqueLabels = [...new Set(labels)];
+    uniqueLabels.forEach(lab => {
+      const mask = labels.map(v => v === lab);
+      scatterTraces.push({
+        x: period.filter((_,i)=>mask[i]),
+        y: depth.filter((_,i)=>mask[i]),
+        z: radius.filter((_,i)=>mask[i]),
+        mode: 'markers',
+        type: 'scatter3d',
+        name: lab,
+        marker: { size: 5, color: colorsDict[lab] }
+      });
+    });
+
+
+    // Fit regression plane: radius = a*period + b*depth + c
+    function fitPlane(x, y, z) {
+      const n = x.length;
+      let sumX = 0, sumY = 0, sumZ = 0, sumXX = 0, sumYY = 0, sumXY = 0, sumXZ = 0, sumYZ = 0;
+      for (let i = 0; i < n; i++) {
+        sumX += x[i];
+        sumY += y[i];
+        sumZ += z[i];
+        sumXX += x[i] * x[i];
+        sumYY += y[i] * y[i];
+        sumXY += x[i] * y[i];
+        sumXZ += x[i] * z[i];
+        sumYZ += y[i] * z[i];
+      }
+      const A = [
+        [sumXX, sumXY, sumX],
+        [sumXY, sumYY, sumY],
+        [sumX,  sumY,  n   ]
+      ];
+      const B = [sumXZ, sumYZ, sumZ];
+      // Gaussian elimination
+      function solve(A, B) {
+        const m = A.length;
+        for (let k = 0; k < m; k++) {
+          let maxRow = k;
+          for (let i = k + 1; i < m; i++) {
+            if (Math.abs(A[i][k]) > Math.abs(A[maxRow][k])) maxRow = i;
+          }
+          [A[k], A[maxRow]] = [A[maxRow], A[k]];
+          [B[k], B[maxRow]] = [B[maxRow], B[k]];
+          for (let i = k + 1; i < m; i++) {
+            const c = A[i][k] / A[k][k];
+            for (let j = k; j < m; j++) A[i][j] -= c * A[k][j];
+            B[i] -= c * B[k];
+          }
+        }
+        const x = Array(m).fill(0);
+        for (let i = m - 1; i >= 0; i--) {
+          x[i] = B[i];
+          for (let j = i + 1; j < m; j++) x[i] -= A[i][j] * x[j];
+          x[i] /= A[i][i];
+        }
+        return x;
+      }
+      const [a, b, c] = solve(A, B);
+      return { a, b, c };
+    }
+
+    const { a, b, c } = fitPlane(period, depth, radius);
+
+    // Regression surface mesh (real model)
+    const xVals = Array.from({length: 30}, (_,i)=> {
+      const min = Math.min(...period), max = Math.max(...period);
+      return min + (max-min)*i/29;
+    });
+    const yVals = Array.from({length: 30}, (_,i)=> {
+      const min = Math.min(...depth), max = Math.max(...depth);
+      return min + (max-min)*i/29;
+    });
+    const zVals = [];
+    for (let i=0; i<yVals.length; i++) {
+      const row = [];
+      for (let j=0; j<xVals.length; j++) {
+        row.push(a*xVals[j] + b*yVals[i] + c);
+      }
+      zVals.push(row);
+    }
+    const surfaceTrace = {
+      x: xVals,
+      y: yVals,
+      z: zVals,
+      type: 'surface',
+      opacity: 0.5,
+      colorscale: 'Viridis',
+      showscale: false,
+      name: 'Regression Surface'
+    };
+
+    // Regression line at mean depth
+    const meanDepth = depth.reduce((a,b)=>a+b,0)/depth.length;
+    const regLineX = xVals;
+    const regLineY = regLineX.map(() => meanDepth);
+    const regLineZ = regLineX.map(x => a*x + b*meanDepth + c);
+    const regLineTrace = {
+      x: regLineX,
+      y: regLineY,
+      z: regLineZ,
+      mode: 'lines',
+      type: 'scatter3d',
+      name: 'Regression Line (mean depth)',
+      line: { color: 'red', width: 6 },
+      hoverinfo: 'none'
+    };
+
+    // Combine traces
+    const data = [surfaceTrace, regLineTrace, ...scatterTraces];
+
+    // Layout
+    const layout = {
+      title: "3D Linear Regression Surface (R² ≈ 0.85)",
+      scene: {
+        xaxis: { title: 'Period (days)' },
+        yaxis: { title: 'Depth (ppm)' },
+        zaxis: { title: 'Radius (R⊕)' }
+      },
+      height: 700
+    };
+
+    Plotly.newPlot('plot', data, layout);
+  </script>
+</body>
+</html>

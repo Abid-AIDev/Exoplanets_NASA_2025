@@ -1,0 +1,52 @@
+NASA Space Apps Challenge - Exoplanet Dataset Features
+==================================================
+
+ 1. period_days
+ 2. duration_hours
+ 3. depth_ppm
+ 4. planet_radius_rearth
+ 5. planet_mass_earth
+ 6. score
+ 7. stellar_teff_k
+ 8. stellar_radius_rsun
+ 9. stellar_logg
+10. stellar_mass_msun
+11. stellar_metallicity
+12. impact_parameter
+13. semi_major_axis_au
+14. inclination_deg
+15. equilibrium_temp_k
+16. insolation_flux
+17. distance_ratio
+18. stellar_density
+19. transit_epoch
+20. eccentricity
+21. longitude_periastron
+22. transit_ingress_hours
+23. radius_ratio
+24. stellar_luminosity
+25. stellar_age_gyr
+26. fp_flag_nt
+27. fp_flag_ss
+28. fp_flag_co
+29. fp_flag_ec
+30. stellar_distance_pc
+31. planet_radius_jupiter
+32. planet_mass_jupiter
+33. discovery_year
+34. discovery_method
+35. duty_cycle
+36. transit_frequency
+37. planet_radius_from_depth
+38. mission_encoded
+39. stellar_radius_solar
+40. stellar_mass_solar
+41. transit_depth_mag
+42. habitable_zone_inner
+43. habitable_zone_outer
+44. in_habitable_zone
+45. transit_snr
+46. has_radius_measurement
+47. has_mass_measurement
+48. has_stellar_parameters
+49. multi_planet_system
